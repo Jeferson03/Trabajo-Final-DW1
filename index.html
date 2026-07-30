@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jeferson Garcia Angel">
+    <meta name="description" content="CineWave: catálogo de series consumido desde la API REST pública de TVMaze.">
+    <title>CineWave | Catálogo de series</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero">
+        <nav class="navbar container" aria-label="Navegación principal">
+            <a class="brand" href="#" aria-label="CineWave inicio">
+                <span class="brand-mark">CW</span>
+                <span>CineWave</span>
+            </a>
+            <span class="api-badge">API REST · TVMaze</span>
+        </nav>
+
+        <section class="hero-content container">
+            <p class="eyebrow">CATÁLOGO DIGITAL</p>
+            <h1>Descubre tu próxima serie favorita.</h1>
+            <p class="hero-description">
+                Explora contenido obtenido en tiempo real desde una API REST pública,
+                con tarjetas generadas dinámicamente y navegación por páginas.
+            </p>
+        </section>
+    </header>
+
+    <main class="container main-content">
+        <section class="section-heading">
+            <div>
+                <p class="eyebrow">EXPLORAR</p>
+                <h2>Series disponibles</h2>
+            </div>
+            <p id="result-status" class="result-status" aria-live="polite">
+                Cargando catálogo...
+            </p>
+        </section>
+
+        <div id="loader" class="loader-wrapper" aria-live="polite">
+            <div class="loader" aria-hidden="true"></div>
+            <span>Cargando contenido...</span>
+        </div>
+
+        <section
+            id="catalog"
+            class="catalog-grid"
+            aria-label="Catálogo de series"
+            aria-live="polite">
+        </section>
+
+        <div id="error-message" class="error-message hidden" role="alert"></div>
+
+        <nav class="pagination" aria-label="Paginación del catálogo">
+            <button id="previous-page" class="pagination-button" type="button">
+                ← Anterior
+            </button>
+
+            <span id="page-indicator" class="page-indicator">Página 1</span>
+
+            <button id="next-page" class="pagination-button primary" type="button">
+                Siguiente →
+            </button>
+        </nav>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>Proyecto académico · Desarrollo Web 1 · 2026</p>
+            <a href="https://www.tvmaze.com/" target="_blank" rel="noopener noreferrer">
+                Datos proporcionados por TVMaze
+            </a>
+        </div>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
