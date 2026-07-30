@@ -140,7 +140,7 @@ La aplicación solicita estas páginas solamente cuando necesita más informaci�
 
 ## 2. Paginación de CineWave
 
-Aunque la API puede devolver hasta 250 resultados por página, la aplicación muestra solamente **10 tarjetas por página** para facilitar la navegación.
+Aunque la API puede devolver hasta 250 resultados por página, la aplicación muestra solamente **15 tarjetas por página** para facilitar la navegación.
 
 Por ejemplo:
 
@@ -277,7 +277,7 @@ Se encarga de:
 * Controlar el estado de la aplicación.
 * Obtener información de `api.js`.
 * Controlar la paginación.
-* Determinar qué 10 resultados mostrar.
+* Determinar qué 15 resultados mostrar.
 * Solicitar nuevas páginas a la API cuando es necesario.
 * Actualizar los botones.
 * Actualizar el indicador de página.
@@ -422,7 +422,7 @@ Solicitar API page=0
 Guardar resultados en allShows
   │
   ▼
-Mostrar resultados 1-10
+Mostrar resultados 1-15
   │
   ▼
 Usuario pulsa "Siguiente"
@@ -430,7 +430,7 @@ Usuario pulsa "Siguiente"
   ▼
 ¿Hay suficientes resultados almacenados?
   │
-  ├── SÍ ──► Mostrar siguientes 10
+  ├── SÍ ──► Mostrar siguientes 15
   │
   └── NO
         │
@@ -441,7 +441,7 @@ Usuario pulsa "Siguiente"
    Agregar resultados a allShows
         │
         ▼
-   Mostrar siguientes 10
+   Mostrar siguientes 15
         │
         ▼
       Repetir
